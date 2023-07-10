@@ -3566,7 +3566,6 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
  .s-about {
-    --color-border: var(--color-gray-16);
     background-color: var(--color-gray-17);
     padding-top: calc(6 * var(--space));
     padding-bottom: var(--vspace-4);
@@ -3673,7 +3672,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-resume {
-    background-color: white;
+    background-color: #eff0f0;
     padding-top: calc(6 * var(--space));
     padding-bottom: var(--vspace-4);
 }
@@ -3689,6 +3688,25 @@ input[type="button"].btn--primary:focus {
     padding-bottom: 0;
     margin-bottom: 0;
 }
+
+.grey-section{
+    background-color: var(--color-gray-17);
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.grey-section h3 {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.grey-section h4 {
+    color:rgba(255, 255, 255, 0.4);
+}
+
+.grey-section strong {
+    color:rgba(255, 255, 255, 0.4);
+}
+
+
 
 /* ------------------------------------------------------------------- 
  * ## resume block
@@ -4186,7 +4204,7 @@ input[type="button"].btn--primary:focus {
  *
  * ------------------------------------------------------------------- */
 .s-footer {
-    background-color: var(--color-gray-18);
+    background-color: var(--color-gray-19);
     padding-top: var(--vspace-1);
     padding-bottom: var(--vspace-3);
     color: rgba(255, 255, 255, 0.2);

@@ -184,7 +184,7 @@
                     spaceBetween: 20
                 },
                 // when window width is >= 801px
-                801: {
+                1034: {
                     slidesPerView: 2,
                     spaceBetween: 48
                 }
