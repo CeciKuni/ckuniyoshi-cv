@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="es">
 
 <head>
 
@@ -20,6 +20,8 @@
     <!-- script
     ================================================== -->
     <script defer src="js/vendor/fontawesome/all.min.js"></script>
+    <script src="js/language.js"></script>
+
 
     <!-- favicons
     ================================================== -->
@@ -46,21 +48,30 @@
         <div class="row s-header__nav-wrap">
             <nav class="s-header__nav">
                 <ul>
-                    <li class="current"><a class="smoothscroll" href="#hero">Inicio</a></li>
-                    <li><a class="smoothscroll" href="#about">Acerca de mí</a></li>
-                    <li><a class="smoothscroll" href="#resume">Experiencia</a></li>
-                    <li><a class="smoothscroll" href="#education">Educación</a></li>
-                    <li><a class="smoothscroll" href="#languages">Idiomas</a></li>
-                    <li><a class="smoothscroll" href="#skills">Conocimientos</a></li>
-                    <li><a class="smoothscroll" href="#portfolio">Proyectos</a></li>
-                    <li><a class="smoothscroll" href="#hobbies">Hobbies</a></li>
+                    <li class="current"><a id="lgHomeButton" class="smoothscroll" href="#hero">Inicio</a></li>
+                    <li><a id="lgAboutButton" class="smoothscroll" href="#about">Acerca de mí</a></li>
+                    <li><a id="lgResumeButton" class="smoothscroll" href="#resume">Experiencia</a></li>
+                    <li><a id="lgEducationButton" class="smoothscroll" href="#education">Educación</a></li>
+                    <li><a id="lgLanguagesButton" class="smoothscroll" href="#languages">Idiomas</a></li>
+                    <li><a id="lgSkillsButton" class="smoothscroll" href="#skills">Conocimientos</a></li>
+                    <li><a id="lgPortfolioButton" class="smoothscroll" href="#portfolio">Proyectos</a></li>
+                    <li><a id="lgHobbiesButton" class="smoothscroll" href="#hobbies">Hobbies</a></li>
+                    <li><a class="language-flags" href="#" onclick="changeLanguage('es','./json/es.json')"><img
+                                class="flag" src="./images/icons/es.png" alt="Spanish Flag" /></a></li>
+                    <li><a class="language-flags" href="#" onclick="changeLanguage('en','./json/en.json')"><img
+                                class="flag" src="./images/icons/en.png" alt="English Flag" /></a></li>
+
                 </ul>
+            </nav>
+
             </nav>
         </div> <!-- end row -->
 
         <a class="s-header__menu-toggle" href="#0" title="Menu">
             <span class="s-header__menu-icon"></span>
         </a>
+
+
     </header> <!-- end s-header -->
 
 
@@ -77,12 +88,12 @@
 
                     <h1>Cecilia Yuriko Kuniyoshi</h1>
 
-                    <h3>
-                        Soy <span>Analista de Control de Calidad (QA)</span> con más de 4 años de experiencia y
-                        conocimientos en desarrollo. Tengo muchos talentos, puedo colaborar como <span>Analista
-                            funcional/técnico</span>,<span> Scrum Master</span>, <span>QA Automation,</span> contribuir
-                        con la parte de <span>auditoría</span> del área de IT ya que me gusta documentar y conozco los
-                        procedimientos del área o bien, <span> Jira Administrator.</span>
+                    <h3 id="lgAboutMe">
+                        Soy Analista de Control de Calidad (QA) con más de 4 años de experiencia y
+                        conocimientos en desarrollo. Tengo muchos talentos, puedo colaborar como Analista
+                        funcional/técnico, Scrum Master, QA Automation, contribuir
+                        con la parte de auditoría del área de IT ya que me gusta documentar y conozco los
+                        procedimientos del área o bien, Jira Administrator.
                     </h3>
 
                     <div class="s-hero__content-social">
@@ -113,7 +124,7 @@
                         </path>
                     </svg>
                 </span>
-                <span class="scroll-text">Ir hacia abajo</span>
+                <span id="lgScrollDown" class="scroll-text">Ir hacia abajo</span>
             </a>
         </div> <!-- s-hero__scroll -->
 
@@ -129,28 +140,35 @@
                 <img class="s-about__pic" src="images/avatars/user-01.jpg" alt="">
             </div>
             <div class="column large-9 tab-12 s-about__content">
-                <h3>Acerca de mí</h3>
-                <br>
-                Soy una persona con ascendencia japonesa, mis padres proceden de la hermosa isla de Okinawa y vinieron a
-                Argentina cuando eran pequeños. Desde muy joven, me he considerado una persona proactiva, con un fuerte
-                impulso de investigación y aprendizaje autodidacta. Siempre busco ampliar mis conocimientos y
-                habilidades, incluso en áreas en las que no soy experta. <br><br>
-
-                Me destaco por mi habilidad para comunicarme efectivamente con mi entorno de trabajo y por mi voluntad
-                de ayudar en cualquier tarea, incluso si no está dentro de mi área de especialización. Además, siento
-                una constante necesidad de mejorar los procesos, tanto a nivel individual como para beneficio de la
-                empresa en su conjunto. <br><br>
-
-                Comencé mi carrera laboral a los 18 años en el sector de la hotelería, pero pronto descubrí mi pasión
-                por el mundo de la tecnología y las computadoras. A partir de ese momento, enfoqué mi experiencia
-                laboral exclusivamente en el campo de la tecnología de la información (IT).
+                <h3 id="lgAboutButton">Acerca de mí</h3>
+                <p id="lgAboutMeOne">
+                    <br>
+                    Soy una persona con ascendencia japonesa, mis padres proceden de la hermosa isla de Okinawa y
+                    vinieron a
+                    Argentina cuando eran pequeños. Desde muy joven, me he considerado una persona proactiva, con un
+                    fuerte
+                    impulso de investigación y aprendizaje autodidacta. Siempre busco ampliar mis conocimientos y
+                    habilidades, incluso en áreas en las que no soy experta. <br><br>
+                </p>
+                <p id="lgAboutMeTwo">
+                    Me destaco por mi habilidad para comunicarme efectivamente con mi entorno de trabajo y por mi
+                    voluntad
+                    de ayudar en cualquier tarea, incluso si no está dentro de mi área de especialización. Además,
+                    siento
+                    una constante necesidad de mejorar los procesos, tanto a nivel individual como para beneficio de la
+                    empresa en su conjunto. <br><br></p>
+                <p id="lgAboutMeThree">
+                    Comencé mi carrera laboral a los 18 años en el sector de la hotelería, pero pronto descubrí mi
+                    pasión
+                    por el mundo de la tecnología y las computadoras. A partir de ese momento, enfoqué mi experiencia
+                    laboral exclusivamente en el campo de la tecnología de la información (IT).
                 </p>
 
                 <hr>
 
                 <div class="row s-about__content-bottom">
                     <div class="column w-1000-stack">
-                        <h3>Datos de contacto</h3>
+                        <h3 id="lgContactData">Datos de contacto</h3>
 
                         <p>
                             Cecilia Yuriko Kuniyoshi <br>
@@ -160,13 +178,16 @@
 
                     </div>
                     <div class="column w-1000-stack">
-                        <a href="./data/CV - Cecilia Kuniyoshi - 2023.pdf" target="_blank" class="btn btn--download">
+                        <a id="lgDownloadButton" href="./data/CV - Cecilia Kuniyoshi - 2023.pdf" target="_blank"
+                            class="btn btn--download">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 style="fill:rgba(0, 0, 0, 1);transform:-ms-filter">
                                 <path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path>
                                 <path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path>
+
                             </svg>
                             Descargar CV
+
                         </a>
                     </div>
                 </div>
@@ -182,7 +203,7 @@
 
         <div class="row s-resume__section">
             <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Trabajos</h3>
+                <h3 id="lgJobs" class="section-header-allcaps">Trabajos</h3>
             </div>
             <div class="column large-9 tab-12">
                 <div class="resume-block">
@@ -190,14 +211,14 @@
                     <div class="resume-block__header">
                         <h4 class="h3">Primary S.A.</h4>
                         <p class="resume-block__header-meta">
-                            <span>QA Manual y Automation</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgJobTitleOne">QA Manual y Automation</span>
+                            <span id="lgMonthsRangeOne" class="resume-block__header-date">
                                 Diciembre 2021 - Abril 2023
                             </span>
                         </p>
                     </div>
 
-                    <p>
+                    <p id="lgPrimaryJob">
                         Tuve la oportunidad de desempeñarme como única (QA) en el proyecto OMS, que consistía en una
                         aplicación web. Durante este proyecto, adquirí experiencia en el uso de diversas herramientas
                         que no conocía previamente. Además de las tareas básicas de un QA, también fui responsable de
@@ -224,14 +245,14 @@
                     <div class="resume-block__header">
                         <h4 class="h3">Technisys</h4>
                         <p class="resume-block__header-meta">
-                            <span>QA Manual</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgJobTitleTwo">QA Manual</span>
+                            <span id="lgMonthsRangeTwo" class="resume-block__header-date">
                                 Enero 2021 - Noviembre 2021
                             </span>
                         </p>
                     </div>
 
-                    <p>
+                    <p id="lgTechnisysJob">
                         Formé parte del equipo del proyecto Diners Club Ecuador, inicialmente trabajé junto a una
                         compañera, pero finalmente asumí la responsabilidad del proyecto en solitario. Mi labor
                         consistía en realizar pruebas tanto en la aplicación web como en la aplicación móvil. Para la
@@ -249,14 +270,14 @@
                     <div class="resume-block__header">
                         <h4 class="h3">Telectrónica Codificación</h4>
                         <p class="resume-block__header-meta">
-                            <span>QA Manual</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgJobTitleOne">QA Manual y Automation</span>
+                            <span id="lgMonthsRangeThree" class="resume-block__header-date">
                                 Abril 2019 - Septiembre 2020
                             </span>
                         </p>
                     </div>
 
-                    <p>
+                    <p id="lgTelectronicaJob">
                         Durante mi experiencia, tuve el desafío de realizar pruebas de múltiples aplicaciones
                         simultáneamente, tanto
                         en entornos web como móviles. Fue en este período cuando realicé mi primera automatización
@@ -275,14 +296,14 @@
                     <div class="resume-block__header">
                         <h4 class="h3">Tsoft</h4>
                         <p class="resume-block__header-meta">
-                            <span>QA Manual</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgJobTitleTwo">QA Manual</span>
+                            <span id="lgMonthsRangeFour" class="resume-block__header-date">
                                 Octubre 2017 - Diciembre 2018
                             </span>
                         </p>
                     </div>
 
-                    <p>
+                    <p id="lgTsoftJob">
                         Mi experiencia formal como Analista de Control de Calidad (QA) comenzó en esta consultora, donde
                         trabajé en proyectos para el banco Credicoop. Durante mi tiempo en este banco, participé en la
                         prueba de diversas aplicaciones, incluyendo el homebanking web y móvil, así como también
@@ -300,14 +321,14 @@
                     <div class="resume-block__header">
                         <h4 class="h3"> PC Lab S.A. - Gecom Software</h4>
                         <p class="resume-block__header-meta">
-                            <span>Supervisora de Control de Calidad de Software</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgJobTitleThree">Supervisora de Control de Calidad de Software</span>
+                            <span id="lgMonthsRangeFive" class="resume-block__header-date">
                                 Abril 2014 - Septiembre 2017
                             </span>
                         </p>
                     </div>
 
-                    <p>
+                    <p id="lgGecomJob">
                         Cuando me uní a esta empresa, no existía un departamento de testing, por lo que comencé a
                         establecerlo yo misma. Aunque mi título era de 'Supervisora', no tenía personal a cargo. El
                         proceso de testing era muy informal, no se contaban con casos de prueba establecidos, así que
@@ -317,7 +338,7 @@
                         En la empresa, había aplicaciones de escritorio para la administración de empresas (un ERP
                         bastante completo), un sistema contable y una aplicación de liquidación de sueldos. Además de
                         mis responsabilidades en el testing, también me encargaba de crear y mantener los manuales de
-                        las aplicaciones, así como de brindar soporte por correo electrónico a los clientes sin abono
+                        las aplicaciones, así como de brindar soporte por correo electrónico a los clientes sin abono.
                     </p>
                 </div> <!-- end resume-block -->
 
@@ -331,36 +352,36 @@
     <section id="education" class="s-resume target-section grey-section">
         <div class="row s-resume__section">
             <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Educación</h3>
+                <h3 id="lgEducationButton" class="section-header-allcaps">Educación</h3>
             </div>
             <div class="column large-9 tab-12">
                 <div class="resume-block">
                     <div class="resume-block__header">
-                        <h4 class="h3">Técnicatura en Administración de Sistemas</h4>
+                        <h4 id="lgEducationOne" class="h3">Técnicatura en Administración de Sistemas</h4>
                         <p class="resume-block__header-meta">
-                            <span>Instituto Privado de la Cámara Argentina de Comercio</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgInstituteOne">Instituto Privado de la Cámara Argentina de Comercio</span>
+                            <span id="lgYearsRangeOne" class="resume-block__header-date">
                                 2012 - 2014 - Incompleto
                             </span>
                         </p>
                     </div>
-                    <p>
-                        Carrera orientada a administrar un área de sistemas en una empresa, de programación tenía poco y
-                        nada. Por exigencias laborales no pude finalizar la carrera.
+                    <p id="lgCareerOne">
+                        Carrera orientada a administrar un área de sistemas en una empresa, de programación tenía muy
+                        poco. Por exigencias laborales no pude finalizar la carrera.
                     </p>
                 </div> <!-- end resume-block -->
 
                 <div class="resume-block">
                     <div class="resume-block__header">
-                        <h4 class="h3">Técnicatura en Administración Hotelera</h4>
+                        <h4 id="lgEducationTwo" class="h3">Técnicatura en Administración Hotelera</h4>
                         <p class="resume-block__header-meta">
-                            <span>Centro de estudios a Nivel Terciario N°1</span>
-                            <span class="resume-block__header-date">
+                            <span id="lgInstituteTwo">Centro de estudios a Nivel Terciario N°1</span>
+                            <span id="lgYearsRangeTwo" class="resume-block__header-date">
                                 2005 - 2007 - Finalizado
                             </span>
                         </p>
                     </div>
-                    <p>
+                    <p id="lgCareerTwo">
                         Carrera para administrar todo tipo de hospedaje.
                     </p>
 
@@ -372,31 +393,32 @@
     <section id="languages" class="s-resume target-section">
         <div class="row s-resume__section">
             <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Idiomas</h3>
+                <h3 id="lgLanguagesButton" class="section-header-allcaps">Idiomas</h3>
             </div>
             <div class="column large-9 tab-12">
                 <div class="resume-block">
                     <div class="resume-block__header">
-                        <h4 class="h3">Inglés</h4>
+                        <h4 id="lgEnglish" class="h3">Inglés</h4>
                     </div>
-                    <p>
+                    <p id="lgEnglishDescription">
                         Actualmente, en 2023, estoy practicando con la plataforma de Open English. Comencé en marzo en
-                        el nivel 3 y ahora me encuentro en el nivel 6, que equivale a un nivel B1 (intermedio), y estoy
-                        cerca de finalizar el nivel B2 (intermedio alto). Mi objetivo es completar toda la plataforma
+                        el nivel 3 y ahora me encuentro en el nivel 7, que equivale a un nivel B2 (intermedio superior).
+                        Mi objetivo es completar toda la plataforma
                         este año, que consta de 8 niveles en total.
 
                         Tengo un buen nivel en lectura (reading), escritura (writing) y comprensión auditiva
-                        (listening), sin embargo, me gustaría mejorar mi nivel de expresión oral (speaking). En cuanto a
+                        (listening), sin embargo, estoy en proceso de mejorar mi nivel de expresión oral (speaking). En
+                        cuanto a
                         cursos particulares, siempre me he mantenido en los niveles B1-B2.
                     </p>
                 </div> <!-- end resume-block -->
 
                 <div class="resume-block">
                     <div class="resume-block__header">
-                        <h4 class="h3">Japonés</h4>
+                        <h4 id="lgJapanese" class="h3">Japonés</h4>
 
                     </div>
-                    <p>
+                    <p id="lgJapaneseDescription">
                         Tengo conocimientos básicos, ya que estudié hace muchos años y no he vuelto a practicar, aún así
                         sigo viendo animé y escucho Jrock/Jpop (música en japonés) para no olvidarme.
                     </p>
@@ -410,11 +432,11 @@
     <section id="skills" class="s-resume target-section grey-section">
         <div class="row s-resume__section">
             <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Conocimientos</h3>
+                <h3 id="lgSkillsButton" class="section-header-allcaps">Conocimientos</h3>
             </div>
             <div class="column large-9 tab-12">
                 <div class="resume-block">
-                    <p>
+                    <p id="lgSkillDescription">
                         He adquirido conocimientos en diversas áreas y continúo realizando cursos sobre diferentes
                         herramientas. Aunque no he tenido la oportunidad de poner en práctica todos mis conocimientos y
                         a veces tiendo a olvidar ciertos detalles, tengo la habilidad de buscar eficientemente en
@@ -426,14 +448,14 @@
                     <div class="row">
                         <div class="column large-6 tab-12">
                             <ul>
-                                <li><strong>Automatización</strong>
+                                <li id="lgAutomation"><strong>Automatización</strong>
                                     <ul>
                                         <li>Cypress.</li>
-                                        <li>Python con Selenium y Pytest.</li>
-                                        <li>Robot Framework con Selenium.</li>
+                                        <li id="lgPythonPytestSelenium">Python con Selenium y Pytest.</li>
+                                        <li id="lgRobotFramework">Robot Framework con Selenium.</li>
                                     </ul>
                                 </li>
-                                <li><strong>Base de datos</strong>
+                                <li id="lgDataBases"><strong>Base de datos</strong>
                                     <ul>
                                         <li>MySql.</li>
                                         <li>MariaDB.</li>
@@ -443,7 +465,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <strong>Lenguajes de Programación</strong>
+                                    <strong id="lgProgrammingLanguages">Lenguajes de Programación</strong>
                                     <ul>
                                         <li>Javascript.</li>
                                         <li>Python.</li>
@@ -455,7 +477,7 @@
                         <div class="column large-6 tab-12">
                             <ul>
                                 <li>
-                                    <strong>Diseño</strong>
+                                    <strong id="lgDesign">Diseño</strong>
                                     <ul>
                                         <li>HTML/CSS</li>
                                         <li>Illustrator.</li>
@@ -463,7 +485,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <strong>Herramientas utilizadas en QA</strong>
+                                    <strong id="lgQaTools">Herramientas utilizadas en QA</strong>
                                     <ul>
                                         <li>JIRA/Confluence</li>
                                         <li>Postman/Insomia/SOAPUI</li>
@@ -475,7 +497,7 @@
                                         <li>Datadog.</li>
                                         <li>Kelk.</li>
                                         <li>JFrog Artifactory.</li>
-                                        <li>Metodología Scrum.</li>
+                                        <li id="lgScrum">Metodología Scrum.</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -495,56 +517,57 @@
 
         <div class="row s-portfolio__header">
             <div class="column large-12">
-                <h3>Algunos de mis proyectos/ideas</h3>
+                <h3 id="lgSomeProjects">Algunos de mis proyectos/ideas</h3>
             </div>
         </div>
 
         <div class="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
 
             <div class="column folio-item">
-                <a href="#modal-01" class="folio-item__thumb">
+
+                <a href="#modal-01" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-01')">
                     <img src="images/portfolio/cypress1.jpg" srcset="images/portfolio/cypress1.jpg 1x, 
                                  images/portfolio/cypress1.jpg 2x" alt="cypress1">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
-                <a href="#modal-02" class="folio-item__thumb">
+                <a href="#modal-02" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-02')">
                     <img src="images/portfolio/cypressCucumber.jpg" srcset="images/portfolio/cypressCucumber.jpg 1x, 
                                  images/portfolio/cypressCucumber.jpg 2x" alt="cypressCucumber">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
-                <a href="#modal-03" class="folio-item__thumb">
+                <a href="#modal-03" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-03')">
                     <img src="images/portfolio/cypress2.jpg" srcset="images/portfolio/cypress2.jpg 1x, 
                                  images/portfolio/cypress2.jpg 2x" alt="cypress2">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
-                <a href="#modal-04" class="folio-item__thumb">
+                <a href="#modal-04" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-04')">
                     <img src="images/portfolio/python.jpg" srcset="images/portfolio/python.jpg 1x, 
                                  images/portfolio/python.jpg 2x" alt="python">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
-                <a href="#modal-08" class="folio-item__thumb">
+                <a href="#modal-08" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-05')">
                     <img src="images/portfolio/apis.jpg" srcset="images/portfolio/apis.jpg 1x, 
                                  images/portfolio/apis.jpg 2x" alt="apis">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
-                <a href="#modal-06" class="folio-item__thumb">
+                <a href="#modal-06" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-06')">
                     <img src="images/portfolio/apis_python.jpg" srcset="images/portfolio/apis_python.jpg 1x, 
                                  images/portfolio/apis_python.jpg 2x" alt="apis_python">
                 </a>
             </div> <!-- end folio-item -->
 
             <div class="column folio-item">
-                <a href="#modal-05" class="folio-item__thumb">
+                <a href="#modal-05" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-07')">
                     <img src="images/portfolio/illustrator.jpg" srcset="images/portfolio/illustrator.jpg 1x, 
                                  images/portfolio/illustrator.jpg 2x" alt="illustrator">
                 </a>
@@ -552,7 +575,7 @@
 
 
             <div class="column folio-item">
-                <a href="#modal-07" class="folio-item__thumb">
+                <a href="#modal-07" class="folio-item__thumb modal-trigger" onclick="changeModalLanguage('#modal-08')">
                     <img src="images/portfolio/gherkin.jpg" srcset="images/portfolio/gherkin.jpg 1x, 
                                  images/portfolio/gherkin.jpg 2x" alt="gherkin">
                 </a>
@@ -565,17 +588,19 @@
 
         <!-- Modal Templates Popup
         =========================================================== -->
+
         <div id="modal-01" hidden>
             <div class="modal-popup">
                 <img src="images/portfolio/gallery/g-cypress1.jpg" alt="cypress" />
 
                 <div class="modal-popup__desc">
-                    <h5>Automation con Cypress ejemplo 1</h5>
-                    <p>Test cases con Cypress y algunas validaciones de la página: "Sauce Demo".</p>
+                    <h5 id="lgCypressExampleOne">Automation con Cypress ejemplo 1</h5>
+                    <p id="lgCypressOneDescription">Test cases con Cypress y algunas validaciones de la página: 'Sauce
+                        Demo'.</p>
 
                 </div>
 
-                <a href="https://github.com/CeciKuni/saucedemo-cypress" class="modal-popup__details"
+                <a id="lgLinkProject" href="https://github.com/CeciKuni/saucedemo-cypress" class="modal-popup__details"
                     target="_blank">Link al proyecto</a>
             </div>
         </div> <!-- end modal -->
@@ -585,12 +610,13 @@
                 <img src="images/portfolio/gallery/g-cypress1.jpg" alt="cypress" />
 
                 <div class="modal-popup__desc">
-                    <h5>Automation Cypress y Cucumber</h5>
-                    <p>Breve prueba con Cypress y Cucumber para probar el formato Gherkin.</p>
+                    <h5 id="lgCypressExampleTwo">Automation Cypress y Cucumber</h5>
+                    <p id="lgCypressTwoDescription">Breve prueba con Cypress y Cucumber para probar el formato Gherkin.
+                    </p>
                 </div>
 
-                <a href="https://github.com/CeciKuni/saucedemo-cypress-cucumber" class="modal-popup__details"
-                    target="_blank">Link al proyecto</a>
+                <a id="lgLinkProject" href="https://github.com/CeciKuni/saucedemo-cypress-cucumber"
+                    class="modal-popup__details" target="_blank">Link al proyecto</a>
             </div>
         </div> <!-- end modal -->
 
@@ -599,12 +625,13 @@
                 <img src="images/portfolio/gallery/g-cypress1.jpg" alt="cypress" />
 
                 <div class="modal-popup__desc">
-                    <h5>Demo automatización con Cypress</h5>
-                    <p>Demostración de Cypress con la página de pruebas "Nop Commerce".</p>
+                    <h5 id="lgCypressExampleThree">Demo automatización con Cypress</h5>
+                    <p id="lgCypressThreeDescription">Demostración de Cypress con la página de pruebas 'Nop Commerce'.
+                    </p>
                 </div>
 
-                <a href="https://github.com/CeciKuni/nopCommerce_Cypress.git" class="modal-popup__details"
-                    target="_blank">Link al proyecto</a>
+                <a id="lgLinkProject" href="https://github.com/CeciKuni/nopCommerce_Cypress.git"
+                    class="modal-popup__details" target="_blank">Link al proyecto</a>
             </div>
         </div> <!-- end modal -->
 
@@ -613,13 +640,14 @@
                 <img src="images/portfolio/gallery/g-python.jpg" alt="python" />
 
                 <div class="modal-popup__desc">
-                    <h5>Automatización con Cypress y Selenium</h5>
-                    <p>Primer proyecto de automatización con Python, Selenium y Pytest, utilizando la página de prueba:
+                    <h5 id="lgPythonSelenium">Automatización con Python y Selenium</h5>
+                    <p id="lgPythonSeleniumDesc">Primer proyecto de automatización con Python, Selenium y Pytest,
+                        utilizando la página de prueba:
                         "Nop Ecommerce".</p>
                 </div>
 
-                <a href="https://github.com/CeciKuni/nopCommerce_Python_Selenium" class="modal-popup__details"
-                    target="_blank">Link al proyecto</a>
+                <a id="lgLinkProject" href="https://github.com/CeciKuni/nopCommerce_Python_Selenium"
+                    class="modal-popup__details" target="_blank">Link al proyecto</a>
             </div>
         </div> <!-- end modal -->
 
@@ -628,12 +656,12 @@
                 <img src="images/portfolio/gallery/g-apis.jpg" alt="" />
 
                 <div class="modal-popup__desc">
-                    <h5>APIS automatizadas</h5>
-                    <p>Automatización de APIS con Postman</p>
+                    <h5 id="lgAPIS">APIs automatizadas</h5>
+                    <p id="lgAPISdesc">Automatización de APIs con Postman</p>
                 </div>
 
-                <a href="https://github.com/CeciKuni/Demo-Postman-Restful-Booker" class="modal-popup__details"
-                    target="_blank">Link al proyecto</a>
+                <a id="lgLinkProject" href="https://github.com/CeciKuni/Demo-Postman-Restful-Booker"
+                    class="modal-popup__details" target="_blank">Link al proyecto</a>
             </div>
 
         </div>
@@ -645,13 +673,13 @@
                 <img src="images/portfolio/gallery/g-illustrator.jpg" alt="" />
 
                 <div class="modal-popup__desc">
-                    <h5>Dibujos e Illustrator</h5>
-                    <p>Dibujos en papel viejos y pizza party en illustrator.</p>
+                    <h5 id="lgDraws">Dibujos e Illustrator</h5>
+                    <p id="lgDrawsDesc">Dibujos en papel viejos y pizza party en illustrator.</p>
 
                 </div>
 
-                <a href="https://www.deviantart.com/ckuniyoshi86/gallery" class="modal-popup__details"
-                    target="_blank">Link al proyecto</a>
+                <a id="lgLinkProject" href="https://www.deviantart.com/ckuniyoshi86/gallery"
+                    class="modal-popup__details" target="_blank">Link al proyecto</a>
             </div>
         </div> <!-- end modal -->
 
@@ -660,12 +688,12 @@
                 <img src="images/portfolio/gallery/g-python.jpg" alt="" />
 
                 <div class="modal-popup__desc">
-                    <h5>APIS con Python</h5>
-                    <p>Ejemplo de un smoke test con la librería requests de Python.</p>
+                    <h5 id="lgApisPython">APIs con Python</h5>
+                    <p id="lgApisPythonDesc">Ejemplo de un smoke test con la librería requests de Python.</p>
                 </div>
 
-                <a href="https://github.com/CeciKuni/Restful-Booker-Python" class="modal-popup__details"
-                    target="_blank">Link al proyecto</a>
+                <a id="lgLinkProject" href="https://github.com/CeciKuni/Restful-Booker-Python"
+                    class="modal-popup__details" target="_blank">Link al proyecto</a>
             </div>
         </div> <!-- end modal -->
 
@@ -674,10 +702,10 @@
                 <img src="images/portfolio/gallery/g-gherkin.jpg" alt="" />
 
                 <div class="modal-popup__desc">
-                    <h5>Uso de Gherkin para casos de prueba</h5>
-                    <p>Casos de pruebas tradicionales versus con formato Gherkins.</p>
+                    <h5 id="lgGherkin">Uso de Gherkin para casos de prueba</h5>
+                    <p id="lgGherkinDesc">Casos de pruebas tradicionales versus con formato Gherkins.</p>
                     <ul>
-                        <li><span>En contrucción...</span></li>
+                        <li id="lgConstruction"><span>En contrucción...</span></li>
 
                     </ul>
                 </div>
@@ -700,23 +728,24 @@
             </div>
             <div class="column large-9 tab-12">
                 <div class="resume-block">
-                    <p>
+                    <p id="lgHobbiesDescOne">
                         Me gusta todo lo relacionado a la cultura japonesa y coreana. Animé, leer mangas y manhwas,
                         dibujar en papel y digital. Escuchar música, sobretodo todo el género de rock de los 60's a
-                        2000, música japonesa (Jpop/Jrock) y el pop coreano. <br><br>Otro pasatiempo es jugar
-                        videojuegos en la
-                        computadora, del estilo survival y aventuras gráficas. En cuanto a películas y series soy fan de
+                        2000, música japonesa (Jpop/Jrock) y el pop coreano. </p>
+                    <p id="lgHobbiesDescTwo">
+                        Otro pasatiempo es jugar videojuegos en la computadora, del estilo survival y aventuras
+                        gráficas. En cuanto a películas y series soy fan de
                         las que te hacen pensar, las paranormales, fantasía y viajes en el tiempo. Otra cosa que siempre
-                        me van a ver haciendo, son cursos, me gusta aprender de todo..<br><br>
+                        me van a ver haciendo, son cursos, me gusta aprender de todo.
                         Y algo muy importante, me gustan los Simpsons hasta la temporada 11.
-                        <br><br>
-                        Listas de Spotify: <a
-                            href="https://open.spotify.com/playlist/0WMdc8YENLZ2vNyHtk5wAZ?si=809283272ed84a80"
-                            target="_blank">Kuni</a>
-                        y
-                        <a href="https://open.spotify.com/playlist/1KprJ0UMrZp192ymERgLPM?si=9ad7412b20f445db"
-                            target="_blank">Nihon</a>
-                        <br><br>
+                    </p>
+                    Listas de Spotify: <a
+                        href="https://open.spotify.com/playlist/0WMdc8YENLZ2vNyHtk5wAZ?si=809283272ed84a80"
+                        target="_blank">Kuni</a>
+                    y
+                    <a href="https://open.spotify.com/playlist/1KprJ0UMrZp192ymERgLPM?si=9ad7412b20f445db"
+                        target="_blank">Nihon</a>
+                    <br><br>
 
                     </p>
 
@@ -750,7 +779,7 @@
             </div>
 
             <div class="column large-7 medium-6 w-1000-stack ss-copyright">
-                <span>Las marcas, logos y nombres comerciales mencionados pertenecen a sus respectivos
+                <span id="lgFooterDesc">Las marcas, logos y nombres comerciales mencionados pertenecen a sus respectivos
                     propietarios.</span>
             </div>
         </div>
@@ -769,6 +798,7 @@
     ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+
 
 </body>
 

@@ -2928,13 +2928,13 @@ input[type="button"].btn--primary:focus {
     }
 }
 
-@media screen and (max-width: 1033px) {
+@media screen and (max-width: 1111px) {
     .section-header-allcaps {
         font-size: calc(var(--text-size) * 0.8889);
     }
 }
 
-@media screen and (max-width: 1033px) {
+@media screen and (max-width: 1111px) {
     .section-header-allcaps {
         font-size: var(--text-size);
         text-align: center;
@@ -2992,6 +2992,19 @@ input[type="button"].btn--primary:focus {
     visibility: visible;
 }
 
+.flag {
+	width: 40px;
+	filter: brightness(70%);
+    margin-bottom: auto;
+
+}
+.language-flags {
+	display: flex;
+	height: 60px;
+	align-items: center;
+	margin-left: auto;
+}
+
 /* -------------------------------------------------------------------
  * ## header nav
  * ------------------------------------------------------------------- */
@@ -3019,10 +3032,10 @@ input[type="button"].btn--primary:focus {
 }
 
 .s-header__nav a {
-    display: block;
+    /*display: block;*/
     height: var(--header-height);
     line-height: var(--header-height);
-    padding: 0 1.6rem;
+    padding: 0 1.2rem;
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -3115,7 +3128,7 @@ input[type="button"].btn--primary:focus {
  * responsive:
  * header
  * ------------------------------------------------------------------- */
-@media screen and (max-width: 1033px) {
+@media screen and (max-width: 1111px) {
     .s-header {
         top: 0;
     }
@@ -3209,7 +3222,7 @@ input[type="button"].btn--primary:focus {
 /* -------------------------------------------------------------------
  * make sure the menu is visible on larger screens
  * ------------------------------------------------------------------- */
-@media only screen and (min-width: 1033px) {
+@media only screen and (min-width: 1111px) {
     .s-header__nav {
         display: block !important;
     }
@@ -4376,7 +4389,7 @@ input[type="button"].btn--primary:focus {
     }
 }
 
-@media screen and (max-width: 1033px) {
+@media screen and (max-width: 1111px) {
     .ss-go-top a {
         height: 5.2rem;
         width: 5.2rem;
