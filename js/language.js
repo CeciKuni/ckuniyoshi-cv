@@ -15,9 +15,9 @@ function language(e, src) {
       });
       const downloadButton = document.getElementById('lgDownloadButton');
       if (e === 'en') {
-        downloadButton.href = './data/CV - Cecilia Kuniyoshi - EN - 2023.pdf';
+        downloadButton.href = './data/CV - Cecilia Kuniyoshi - EN - 2024.pdf';
       } else {
-        downloadButton.href = './data/CV - Cecilia Kuniyoshi - 2023.pdf';
+        downloadButton.href = './data/CV - Cecilia Kuniyoshi - 2024.pdf';
       }
     });
 }
