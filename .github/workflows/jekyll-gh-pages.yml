@@ -1,9 +1,9 @@
-name: Deploy GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # Cambia 'main' por la rama que estés usando
+      - main
 
 jobs:
   build:
@@ -13,12 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v2
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Publica todos los archivos en la raíz
-          
+      - name: Build project
+        run: |
+          # Aquí va tu script de construcción
+          npm install
+          npm run build
+
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -44,3 +44,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
